@@ -1,4 +1,4 @@
-package com.qian;
+package com.qian.salftag;
 
 import org.springframework.beans.factory.support.BeanDefinitionBuilder;
 import org.springframework.beans.factory.xml.AbstractSingleBeanDefinitionParser;

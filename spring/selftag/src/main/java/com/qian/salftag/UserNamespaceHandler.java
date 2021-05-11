@@ -1,4 +1,4 @@
-package com.qian;
+package com.qian.salftag;
 
 import org.springframework.beans.factory.xml.NamespaceHandlerSupport;
 

@@ -1,5 +1,6 @@
-package com.qian;
+package com.qian.salftag;
 
+import org.springframework.context.ApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 
 /**
@@ -10,7 +11,7 @@ import org.springframework.context.support.ClassPathXmlApplicationContext;
 public class MainTest {
 
     public static void main(String[] args) {
-        ClassPathXmlApplicationContext ac = new ClassPathXmlApplicationContext("applicationContext.xml");
+        ApplicationContext ac = new ClassPathXmlApplicationContext("applicationContext.xml");
         User qws = (User) ac.getBean("qws");
         System.out.println(qws.toString());
     }
