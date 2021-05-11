@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="
+       http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <bean id="customer" class="com.qian.salfeditor.Customer">
+        <property name="name" value="qian"></property>
+        <property name="address" value="河南省_驻马店市_平舆县"></property>
+    </bean>
+
+<!--    <bean class="org.springframework.beans.factory.config.CustomEditorConfigurer">-->
+<!--        <property name="propertyEditorRegistrars">-->
+<!--            <list>-->
+<!--                <bean class="com.qian.salfeditor.AddressPropertyEditorRegistrar"></bean>-->
+<!--            </list>-->
+<!--        </property>-->
+<!--    </bean>-->
+
+    <bean class="org.springframework.beans.factory.config.CustomEditorConfigurer">
+        <property name="customEditors">
+            <map>
+                <entry key="com.qian.salfeditor.Address" value="com.qian.salfeditor.AddressPropertyEditor">
+                </entry>
+            </map>
+        </property>
+    </bean>
+</beans>
